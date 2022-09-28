@@ -25,9 +25,9 @@ COPY --from=builder /angular-app/dist .
 EXPOSE 4200
 # Containers run nginx with global directives and daemon off
 CMD ["nginx", "-g", "daemon off;"]
-# docker build -f Dockerfile -t intelfs/ua .
+# docker build -f Dockerfile -t angularapp .
 # run with port mapping (any incoming traffic on local network port 8080 forwarded  4200 inside the container )
-# docker run -d -p 8080:4200 intelfs/ua
+# docker run -d -p 8080:4200 iangularapp
 # export and import docker file
-# docker save intelfs/ua:latest | gzip > intelfs_ua.tar.gz
-# docker load < intelfs_ua.tar.gz
+# docker save angularapp:latest | gzip > angularapp.tar.gz
+# docker load < angularapp.tar.gz
